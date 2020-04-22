@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<h2>HTML Iframes</h2>
-<p>You can use the height and width attributes to specify the size of the iframe:</p>
-
-<iframe src="demo_iframe.htm" height="200" width="300"></iframe>
-
-</body>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ThreesCompany</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Game2.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 1280px; height: 720px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">ThreesCompany</div>
+      </div>
+    </div>
+  </body>
 </html>
